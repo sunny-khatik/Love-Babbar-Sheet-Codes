@@ -26,6 +26,7 @@ class LinkedList:
                 print(temp.data,"->", end="")
                 temp = temp.next
         # print(temp.data)
+        print()
         
     def push(self, data):   #insert_at_beginig
         
@@ -76,6 +77,18 @@ class LinkedList:
                     node.next = temp
                 itr = itr.next
                 c+=1
+    
+    def reverse_list(self):
+        curr = self.head
+        prev = None
+        next = None
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        self.head = prev
+    
 
 if __name__ == "__main__":
     l = LinkedList()
@@ -88,4 +101,6 @@ if __name__ == "__main__":
     # l.remove_at_index(1)
     # l.remove_at_index(0)
     print(l.get_length())
+    l.print_l()
+    l.reverse_list()
     l.print_l()
