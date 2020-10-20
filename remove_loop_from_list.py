@@ -20,3 +20,19 @@ def removeLoop(head):
         if s == f:
             rm(s , f, head)
             break
+            
+     
+#new Code Metho hashing method.
+def removeLoop(head):
+    prev = None
+    temp = head
+    s = set()
+    while temp:
+        
+        if temp in s:
+            prev.next = None
+            break
+        else:
+            s.add(temp)
+            prev = temp
+            temp = temp.next
