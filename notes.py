@@ -1,3 +1,7 @@
+x , y= 10, 13 
+print("First number {} is  and second number is {}".format(x, y))
+
+
 del : del is used to delete a reference to an object. Any variable or list value can be deleted using del.
 
 a = [1, 2, 3]
