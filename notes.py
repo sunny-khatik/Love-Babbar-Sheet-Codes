@@ -29,7 +29,8 @@ print (a)
 
 # https://www.geeksforgeeks.org/looping-techniques-python/      zip and enumarete
 # https://www.geeksforgeeks.org/args-kwargs-python/     --> *args , **kwargs
-#  https://www.geeksforgeeks.org/generators-in-python/ 
+# https://www.geeksforgeeks.org/generators-in-python/
+# https://www.geeksforgeeks.org/global-keyword-in-python/
 # learn lambda in python
 
 # one line else if statement
