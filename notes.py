@@ -1,6 +1,6 @@
 l.remove() #if we will use it then it will raise error if element is not there in list
 l.pop() # index ander apvani and remove kre return pn kre remove thyelo element and error pan raise kare
-
+l.sort(reverse=True) #desending ma sort kare
 x , y= 10, 13 
 print("First number {} is  and second number is {}".format(x, y))
 
