@@ -29,6 +29,8 @@ print (a)
 
 # https://www.geeksforgeeks.org/looping-techniques-python/      zip and enumarete
 # https://www.geeksforgeeks.org/args-kwargs-python/     --> *args , **kwargs
+#  https://www.geeksforgeeks.org/generators-in-python/ 
+# learn lambda in python
 
 # one line else if statement
 a = 10 if False else 0
