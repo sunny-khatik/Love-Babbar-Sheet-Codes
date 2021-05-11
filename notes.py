@@ -1,6 +1,9 @@
 l.remove() #if we will use it then it will raise error if element is not there in list
 l.pop() # index ander apvani and remove kre return pn kre remove thyelo element and error pan raise kare
 l.sort(reverse=True) #desending ma sort kare
+#set ma elemtnt remove() -> raise error
+#set ma elemtnt discard() -> not raise error
+
 x , y= 10, 13 
 print("First number {} is  and second number is {}".format(x, y))
 
@@ -24,7 +27,8 @@ print ("The list after deleting 2nd element")
 print (a)
 
 
-
+# https://www.geeksforgeeks.org/looping-techniques-python/      zip and enumarete
+# https://www.geeksforgeeks.org/args-kwargs-python/     --> *args , **kwargs
 
 # one line else if statement
 a = 10 if False else 0
@@ -37,3 +41,15 @@ b = -7.93
 x = (round(a+b , 2))
 print(x)
 print(a+b)
+
+
+
+d = { "geeks" : "for", "only" : "geeks" }
+  
+# using iteritems to print the dictionary key-value pair
+print ("The key value pair using iteritems is : ")
+for i,j in d.iteritems():
+    print i,j
+  
+#  l = sorted(l) used for sort the container
+#  l = reversed(l) reverse the item in container change the index to last and accordingly
