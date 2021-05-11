@@ -12,3 +12,10 @@ del a[1]
 # printing list after deleting 2nd element
 print ("The list after deleting 2nd element")
 print (a)
+
+
+
+
+# one line else if statement
+a = 10 if False else 0
+print(a)
