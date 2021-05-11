@@ -19,3 +19,11 @@ print (a)
 # one line else if statement
 a = 10 if False else 0
 print(a)
+
+
+#round function
+a = 10.5
+b = -7.93
+x = (round(a+b , 2))
+print(x)
+print(a+b)
