@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/coin-change/problem
 def getWays(summ, c): #coin array c and summ given in input.
     n = len(c)
     t = [[0 for i in range(summ+1)] for j in range(n+1)]
