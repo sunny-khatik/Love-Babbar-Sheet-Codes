@@ -22,8 +22,8 @@ class Solution:
             return 1
         else:
             return 0
-    #using recursive approch
-    def isSubset(self,arr,n, s):
+    #using recursive approch TLE ayi jase beta
+    def isSubset(self,arr,n, s): 
         if s == 0:
             return 1
         if n == 0 and sum != 0:
