@@ -1,3 +1,5 @@
+
+# https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1
 # itertive function
 def knapSack(self,c, wt, val, n):
         t = [[-1 for i in range(c+1)] for j in range(n+1)]
