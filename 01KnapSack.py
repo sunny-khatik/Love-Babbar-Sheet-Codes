@@ -19,6 +19,7 @@ def knapSack(self,c, wt, val, n):
 class Solution:
     
     #Function to return max value that can be put in knapsack of capacity W.
+        #recursive ma error ayi jase beta
     def knapSack(self,c, wt, val, n):
         if c == 0 or n == 0:
             return 0
