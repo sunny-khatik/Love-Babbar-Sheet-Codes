@@ -3,6 +3,10 @@ l.pop() # index ander apvani and remove kre return pn kre remove thyelo element 
 l.sort(reverse=True) #desending ma sort kare
 #set ma elemtnt remove() -> raise error
 #set ma elemtnt discard() -> not raise error
+import sys
+print(sys.maxsize)  #for maxsize in int. 
+s=s[::-1] #to reverse  a string
+
 
 x , y= 10, 13 
 print("First number {} is  and second number is {}".format(x, y))
