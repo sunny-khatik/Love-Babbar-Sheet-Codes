@@ -1,3 +1,10 @@
+from collections import defaultdict
+def rundict():
+  return -1
+ 
+ d = defaultdcit(rundict)
+#  if there is a no key and will access wong key then it wil throw a -1 to us.
+
 l.remove() #if we will use it then it will raise error if element is not there in list
 l.pop() # index ander apvani and remove kre return pn kre remove thyelo element and error pan raise kare
 l.sort(reverse=True) #desending ma sort kare
