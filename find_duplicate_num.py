@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/find-the-duplicate-number/submissions/
+# without changing array using tortoise method aka floyd cycle detection
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
         slow = nums[0]
