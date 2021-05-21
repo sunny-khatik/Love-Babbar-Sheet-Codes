@@ -1,3 +1,11 @@
+# 2D sorting according to l[0] as mentioned in a code
+l = [ [2,4] ,[1 ,4],[-1,7] ,[-1 ,6], [0,2]]
+print(sorted(l, key=lambda x:x[0] ))
+for i in l:
+    print(i[1])
+
+
+
 from collections import defaultdict
 def rundict():
   return -1
