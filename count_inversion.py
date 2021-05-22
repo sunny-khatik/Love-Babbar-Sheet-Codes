@@ -71,7 +71,7 @@ class Solution:
             else:
                 # Inversion will occur.
                 temp_arr[k] = arr[j]
-                inv_count += (mid-i + 1)
+                inv_count += (mid-i + 1)  #Here we increase count which gives us a inversion because left arra has bigges and after that all are biggest.
                 k += 1
                 j += 1
      
