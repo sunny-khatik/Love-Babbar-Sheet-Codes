@@ -17,3 +17,17 @@ class Solution:
             for k in range(min):
                 ans.append(chr(97+j))
         return ans
+    
+ class Solution:
+    def commonChars(self, A: List[str]) -> List[str]:
+        letters = list(A[0])
+        for i in range(1,len(A)):
+            j=0
+            while j < len(letters):
+                if letters[j] not in A[i]: 
+                    letters.remove(letters[j])
+                else: 
+                    A[i] = A[i].replace(letters[j],"",1)
+                    j = j+1
+                    
+        return letters
