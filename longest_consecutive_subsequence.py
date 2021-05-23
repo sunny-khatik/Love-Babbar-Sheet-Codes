@@ -1,5 +1,6 @@
 # https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence2449/1#
 # see dhruv goyel solution
+# see page no 6 of Journals.
 class Solution:
     
     # arr[] : the input array
