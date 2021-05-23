@@ -21,3 +21,29 @@ for i in range(n):
             wrongI = i
             
 print(l)
+
+
+# without an Order but works only when same positive and negative Number needs modification in it
+l = [ 2, 3, -4, -1, 6, -9  ]
+i, j = 0, len(l)-1
+
+while True:
+    if i >= j:
+        break
+    if l[i] > 0 and l[j] <= 0:
+        l[i], l[j]=l[j],l[i]
+        i+=1
+        j-=1
+    elif l[i] < 0:
+        i+=1
+    elif l[j] >= 0:
+        j-=1
+print(l)
+i=0
+j = len(l)-1
+while i < j:
+    if i%2 == 0:
+        l[i],l[j]=l[j],l[i]
+    i+=1
+    j-=1
+print(l)
