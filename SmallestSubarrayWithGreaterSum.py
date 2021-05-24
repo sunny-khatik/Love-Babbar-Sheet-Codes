@@ -1,6 +1,6 @@
 # https://practice.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1#
 # see Dhruv Goyel's video for this.
-
+# https://www.geeksforgeeks.org/minimum-length-subarray-sum-greater-given-value/
 class Solution:
     def sb(self, a, n, x):
         ans=n+1
