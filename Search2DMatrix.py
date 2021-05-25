@@ -17,3 +17,18 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         # print(len(matrix), len(matrix[0]))
         return self.MatrixBinarySearch(0,(len(matrix)*len(matrix[0]))-1,matrix,len(matrix[0]),target)
+    
+   # for sorted row as well as sorted column approch tuf serch matrix video gfg problem best solution 
+    class Solution:
+	def matSearch(self,mat, N, M, X):
+	    i=0
+	    j=M-1
+	    while i < N and j >= 0:
+	        if mat[i][j] == X:
+	            return 1
+	        elif mat[i][j] < X:
+	            i+=1
+	        else:
+	            j-=1
+	    return 0
+
