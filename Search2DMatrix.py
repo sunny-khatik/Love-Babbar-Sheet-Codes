@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/search-a-2d-matrix/
 # see striver TUF series Question for better understanding.
 #leet code best approch
+#if we apeend elemnts in a list so it will give us a sorted array according to leetcode problem description
 class Solution:
     def MatrixBinarySearch(self,low,high,mat,n,t):
         if low <= high:
