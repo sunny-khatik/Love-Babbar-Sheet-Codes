@@ -1,5 +1,6 @@
 # https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1#
 # aditya varma
+# take only k size of heap
 from heapq import heapify, heappop, heappush
 class Solution:
     def kthSmallest(self,arr, l, r, k):
