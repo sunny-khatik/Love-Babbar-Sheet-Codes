@@ -1,12 +1,13 @@
 #heap sort using max heap.
+#in this if sort if we gonna change the sign of equation 1 and 2 then it will use mean heap and retrun array in desending order.
 class Solution:
     def heapify(self,arr, n, i):
         largest = i
         l = 2*i + 1
         r = 2*i + 2
-        if l < n and arr[l] > arr[largest]:
+        if l < n and arr[l] > arr[largest]: #EQ=1  it check the left node if greater then update
             largest = l
-        if r < n and arr[r] > arr[largest]:
+        if r < n and arr[r] > arr[largest]: #EQ=2 it check the right node if greater then update
             largest = r
         if largest != i:
             arr[i],arr[largest] = arr[largest],arr[i]
