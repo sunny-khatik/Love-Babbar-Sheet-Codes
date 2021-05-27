@@ -1,0 +1,5 @@
+https://www.geeksforgeeks.org/k-th-largest-sum-contiguous-subarray/
+check this GFG rticle create prefix sum array according to code in article
+take all subarrays sum and push then in heap of size K.
+when it goest greater then k just pop it
+in last return the top elemnt of heap 
