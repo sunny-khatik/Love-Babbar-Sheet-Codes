@@ -1,5 +1,6 @@
 # make use of dictionary and heap
 # https://www.geeksforgeeks.org/how-to-maintain-dictionary-in-a-heap-in-python/
+# https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/
 class Solution:
     def reorganizeString(self, s: str) -> str:
         cntr = collections.Counter(s)
