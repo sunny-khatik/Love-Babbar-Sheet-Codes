@@ -20,5 +20,5 @@ class Solution:
                 bool[i]=True
                 ds.append(s[i])
                 self.solve(s,ds,ans,bool)
-                ds.pop(len(ds)-1)
+                ds.pop(len(ds)-1) #pop the last added element and make the index false
                 bool[i]=False
