@@ -3,15 +3,18 @@ from collections import defaultdict
 class Solution:
     
     #Function to check if two strings are isomorphic.
-    def areIsomorphic(self,str1,str2):
-        l = [0]*26
-        t = [0]*26
-        if len(str1) != len(str2):
+    def areIsomorphic(self,s1,s2):
+        d = defaultdict(lambda:-1)
+        n ,m = len(s1),len(s2)
+        if n != m:
             return False
-        for i in range(len(str1)):
-            if l[ord(str1[i])-ord("a")] == 0 and t[ord(str2[i])-ord("a")] == 0:
-                l[ord(str1[i])-ord("a")] = 1
-                t[ord(str2[i])-ord("a")] = 1
-            elif l[ord(str1[i])-ord("a")]  != t[ord(str2[i])-ord("a")] :
+        mark = [False]*26
+        for i in range(n):
+            if d[s1[i]] == -1:
+                if mark[ord(s2[i])-ord("a")] == True:
+                    return False
+                mark[ord(s2[i])-ord("a")] = True
+                d[s1[i]] = s2[i]
+            elif d[s1[i]] != s2[i]:
                 return False
         return True
