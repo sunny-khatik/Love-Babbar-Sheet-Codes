@@ -1,3 +1,4 @@
+# https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1#
 #see striver solution
 from collections import defaultdict
 import sys
