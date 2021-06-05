@@ -1,4 +1,5 @@
 # https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1#
+#apna college vala video dekh
 from collections import defaultdict
 class Solution:
     #Function to count subarrays with sum equal to 0.
