@@ -1,4 +1,3 @@
-# your code goes here
 def bs1(arr,start ,end,x):
     res = -1
     while start <= end:
@@ -18,6 +17,7 @@ def bs2(arr,start ,end,x):
     while start <= end:
         mid = start + (end-start)//2
         if arr[mid] == x:
+            res=mid
             start=mid+1
         elif arr[mid] < x:
             res = mid
@@ -53,6 +53,6 @@ if __name__ == "__main__":
 	for i in range(len(s1)):
 		low = bs1(s2,0,len(s2)-1,a-s1[i])
 		high = bs2(s2,0,len(s2)-1,b-s1[i])
-		c+=(high-low)
+		if high != -1 and low != -1:
+		    c+=(high-low+1)
 	print(c)
-		
