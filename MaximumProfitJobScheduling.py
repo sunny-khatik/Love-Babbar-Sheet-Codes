@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+#code library
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         jobs = (zip(startTime,endTime,profit))
