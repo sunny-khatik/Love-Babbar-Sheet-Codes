@@ -21,7 +21,7 @@ for i in range(n):
             wrongI = i
             
 print(l)
-#solution
+#solution corner negative elemnt and postive element
 def rearrange(l,n):
     low=0
     high=n-1
