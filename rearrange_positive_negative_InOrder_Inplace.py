@@ -21,29 +21,43 @@ for i in range(n):
             wrongI = i
             
 print(l)
-
-
-# without an Order but works only when same positive and negative Number needs modification in it
-l = [ 2, 3, -4, -1, 6, -9  ]
-i, j = 0, len(l)-1
-
-while True:
-    if i >= j:
-        break
-    if l[i] > 0 and l[j] <= 0:
-        l[i], l[j]=l[j],l[i]
-        i+=1
-        j-=1
-    elif l[i] < 0:
-        i+=1
-    elif l[j] >= 0:
-        j-=1
-print(l)
-i=0
-j = len(l)-1
-while i < j:
-    if i%2 == 0:
-        l[i],l[j]=l[j],l[i]
-    i+=1
-    j-=1
-print(l)
+#solution
+def rearrange(l,n):
+    low=0
+    high=n-1
+    while low <= high:
+        if l[low] > 0 and l[high] < 0:
+            l[low],l[high]=l[high],l[low]
+            low+=1
+            high-=1
+        elif l[low] > 0 and l[high] > 0:
+            high-=1
+        elif l[high] < 0 and l[low] < 0:
+            low+=1
+        else:
+            low+=1
+            high-=1
+    print(l)
+arr = [-1, -2, 3, 4, -5, 6, -7, -8, -9]
+n = len(arr)
+rearrange(arr, n)
+#solution 3
+def rearrange(l,n):
+    low=0
+    high=n-1
+    while low <= high:
+        if l[low] > 0 and l[high] < 0:
+            l[low],l[high]=l[high],l[low]
+            low+=1
+            high-=1
+        elif l[low] > 0 and l[high] > 0:
+            high-=1
+        elif l[high] < 0 and l[low] < 0:
+            low+=1
+        else:
+            low+=1
+            high-=1
+    print(l)
+arr = [-1, -2, 3, 4, -5, 6, -7, -8, -9]
+n = len(arr)
+rearrange(arr, n)
