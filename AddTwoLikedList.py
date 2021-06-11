@@ -20,7 +20,6 @@ class Solution:
         first = self.rev(first)
         second = self.rev(second)
         carry = 0
-        prev = None
         tmpf = first
         tmps = second
         res = None
