@@ -1,25 +1,29 @@
-# https://www.youtube.com/watch?v=JsVGDy0u1u8
-# video for understanding
-def rm(s , f, head):
-    s = head
-    while s != f:
-        s = s.next
-        f = f.next
-    
-    while f.next != s:
-        f = f.next
-    f.next = None
-
-def removeLoop(head):
-    s = head
-    f = head
-    while s and f and f.next:
-        s = s.next
-        f = f.next.next
-        
-        if s == f:
-            rm(s , f, head)
-            break
+#code library solution
+class Solution:
+    #Function to remove a loop in the linked list.
+    def removeLoop(self, head):
+        s,f=head, head
+        bool = True
+        while s and f and f.next:
+            s=s.next
+            f=f.next.next
+            if s == f:
+                bool=False
+                break
+        if bool:
+            return 
+        if s == head:
+            while f.next != s:
+                f=f.next
+            f.next=None
+            return
+        else:
+            s = head
+            while s.next != f.next:
+                s=s.next
+                f=f.next
+            f.next=None
+            return
             
      
 #new Code Metho hashing method.
