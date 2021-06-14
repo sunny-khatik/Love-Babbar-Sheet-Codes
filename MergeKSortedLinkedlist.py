@@ -1,4 +1,5 @@
 # https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1
+# code library has diffrent approches
 def merge(self, a,b):
         if a == None:
             return b
