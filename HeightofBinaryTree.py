@@ -5,10 +5,4 @@ class Solution:
         # code here
         if root == None:
             return 0
-        lhight = self.height(root.left)
-        rhight = self.height(root.right)
-        if lhight > rhight:
-            return lhight+1
-            
-        else:
-            return rhight+1
+        return 1 + max(self.height(root.left) ,self.height(root.right))
