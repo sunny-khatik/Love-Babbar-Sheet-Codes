@@ -1,3 +1,4 @@
+# https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1
 # https://practice.geeksforgeeks.org/problems/level-order-traversal/1#
 class Solution:
     #Function to return the level order traversal of a tree.
@@ -19,4 +20,5 @@ class Solution:
     def levelOrder(self,root ):
         l= list()
         self.solve(root,l)
+        # for revrsal order traveral just revrse the list.
         return l
