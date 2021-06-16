@@ -25,7 +25,7 @@ class Graph:
         for u in range(self.n):
             if visited[u] == False:
                 self.DFSUtil(u,visited)
-#Iterative DFS    
+#Iterative DFS code
 #     def DFS(self,start):  
 #         stack = list()
 #         visited = [False for i in range(self.n)]
