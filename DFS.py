@@ -25,6 +25,19 @@ class Graph:
         for u in range(self.n):
             if visited[u] == False:
                 self.DFSUtil(u,visited)
+#Iterative DFS    
+#     def DFS(self,start):  
+#         stack = list()
+#         visited = [False for i in range(self.n)]
+#         stack.append(start)
+#         while len(stack) > 0:
+#             s = stack.pop()
+#             if visited[s] == False:
+#                 print(s)
+#                 visited[s] = True
+#             for i in self.l[s]:
+#                 if visited[i] == False:
+#                     stack.append(i)
 if __name__ == "__main__":
     V = 5
     graph = Graph(V)
