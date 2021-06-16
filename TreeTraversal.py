@@ -34,6 +34,9 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
+#            1
+#      2          3
+# 4       5   N       N
 print ("Preorder traversal of binary tree is")
 printPreorder(root)
  
@@ -41,4 +44,19 @@ print( "\nInorder traversal of binary tree is")
 printInorder(root)
  
 print( "\nPostorder traversal of binary tree is")
-printPostorder(root)
+printPostorder(root)]
+
+# output
+# Preorder traversal of binary tree is
+
+# 1 2 4 5 3 
+
+# Inorder traversal of binary tree is
+
+# 4 2 5 1 3 
+
+# Postorder traversal of binary tree is
+
+# 4 5 2 3 1 
+
+
