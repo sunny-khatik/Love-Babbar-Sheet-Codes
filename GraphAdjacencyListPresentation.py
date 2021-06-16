@@ -1,5 +1,5 @@
 
-
+#undirected graph
 class Graph:
     def __init__(self,node):
         self.l = list()
