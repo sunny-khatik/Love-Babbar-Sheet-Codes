@@ -28,33 +28,34 @@ class Graph:
 # Iterative DFS code
 
     def BFS(self, s):
-        visited = [False for i in range(self.n)]
+        visited = [False for i in range(self.n+1)]
         stack = list()
         stack.append(s)
-        visited[s]= True
+        visited[s] = True
+        ans= list()
         while len(stack) > 0:
-            new = stack.pop(0)
-            print(new,end=" ")
-            for i in self.l[new]:
+            node = stack.pop(0)
+            print(node, end=" ")
+            for i in self.l[node]:
                 if visited[i] == False:
                     stack.append(i)
                     visited[i]=True
+    
                     
-    def DFS(self,start):  
-        stack = list()
-        visited = [False for i in range(self.n)]
-        stack.append(start)
-        while len(stack) > 0:
-            s = stack.pop()
-            if visited[s] == False:
-                print(s,end=" ")
-                visited[s] = True
-            for i in self.l[s]:
-                if visited[i] == False:
-                    stack.append(i)
+    def DFS(self,start):
+        visited = [False]*self.n
+        self.dfsRec(start, visited)
+
+    def dfsRec(self,start, visited):
+        visited[start] = True
+        print(start, end=" ")
+        for i in self.l[start]:
+            if not visited[i]:
+                self.dfsRec(i, visited)
+        
     
 if __name__ == "__main__":
-    V = 5
+    V = 7
     graph = Graph(V)
     graph.add_edge(0, 1)
     graph.add_edge(0, 4)
@@ -63,7 +64,10 @@ if __name__ == "__main__":
     graph.add_edge(1, 4)
     graph.add_edge(2, 3)
     graph.add_edge(3, 4)
-#     graph.print_graph()'
+    graph.add_edge(5, 1)
+    graph.add_edge(6, 2)
+    graph.add_edge(6, 5)
+    # graph.print_graph()
     print("DFS :",end=" ")
     graph.DFS(0)
     print()
