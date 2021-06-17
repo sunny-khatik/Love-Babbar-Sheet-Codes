@@ -1,3 +1,5 @@
+# Connected and disconnected graph
+
 class Graph:
     def __init__(self,node):
         self.l = list()
@@ -26,9 +28,21 @@ class Graph:
     #         if visited[u] == False:
     #             self.DFSUtil(u,visited)
 # Iterative DFS code
+    def DFS(self,start):
+                visited = [False]*self.n
 
-    def BFS(self, s):
-        visited = [False for i in range(self.n+1)]
+                # self.dfsRec(start, visited)
+                for i in range(self.n):
+                    if visited[i] == False:
+                        self.dfsRec(i,visited)
+    def dfsRec(self,start, visited):
+        visited[start] = True
+        print(start, end=" ")
+        for i in self.l[start]:
+            if not visited[i]:
+                self.dfsRec(i, visited)
+    
+    def BFS(self,s,visited):
         stack = list()
         stack.append(s)
         visited[s] = True
@@ -40,36 +54,28 @@ class Graph:
                 if visited[i] == False:
                     stack.append(i)
                     visited[i]=True
-    
-                    
-    def DFS(self,start):
-        visited = [False]*self.n
-        self.dfsRec(start, visited)
+    def BFSdisc(self):
+        visited = [False for i in range(self.n)]
+        for i in range(self.n):
+            if visited[i] == False:
+                self.BFS(i,visited)
 
-    def dfsRec(self,start, visited):
-        visited[start] = True
-        print(start, end=" ")
-        for i in self.l[start]:
-            if not visited[i]:
-                self.dfsRec(i, visited)
-        
-    
 if __name__ == "__main__":
     V = 7
     graph = Graph(V)
-    graph.add_edge(0, 1)
-    graph.add_edge(0, 4)
-    graph.add_edge(1, 2)
+    graph.add_edge(0, 2)
+    graph.add_edge(0,1)
+    graph.add_edge(3, 2)
     graph.add_edge(1, 3)
-    graph.add_edge(1, 4)
-    graph.add_edge(2, 3)
-    graph.add_edge(3, 4)
-    graph.add_edge(5, 1)
-    graph.add_edge(6, 2)
-    graph.add_edge(6, 5)
+    graph.add_edge(4 , 5)
+    graph.add_edge(5,6)
+    graph.add_edge(6, 4)
+    # graph.add_edge(5, 1)
+    # graph.add_edge(6, 2)
+    # graph.add_edge(6, 5)
     # graph.print_graph()
     print("DFS :",end=" ")
     graph.DFS(0)
     print()
     print("BFS :",end=" ")
-    graph.BFS(0)
+    graph.BFSdisc()
