@@ -40,3 +40,29 @@ class Solution:
                 if tmp.right != None:
                     q.append(tmp.right)
         return l
+# top view of tree
+# code library
+# same code but stratagy changes.
+# https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1#
+class Solution:
+    def topView(self,root):
+        if root == None:
+            return []
+        q = list()
+        d = {}
+        q.append([root, 0])
+        while len(q) > 0:
+            tmp = q.pop(0)
+            node = tmp[0]
+            height = tmp[1]
+            if height not in d:
+                d[height] = node.data
+            if node.left != None:
+                q.append([node.left,height-1])
+            if node.right != None:
+                q.append([node.right,height+1])
+        ans= list()
+        #for output left to right
+        for i,j in sorted(d.items(),key=lambda x:x[0]):
+            ans.append(j)
+        return ans
