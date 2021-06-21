@@ -49,3 +49,5 @@ def buildTree(ino, post, n):
     o = Test(n-1)
     head = o.solve(post,d,0,n-1)
     return head
+# https://www.geeksforgeeks.org/full-and-complete-binary-tree-from-given-preorder-and-postorder-traversals/
+# tree pre and post jennys lectures
