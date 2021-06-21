@@ -51,3 +51,38 @@ def buildTree(ino, post, n):
     return head
 # https://www.geeksforgeeks.org/full-and-complete-binary-tree-from-given-preorder-and-postorder-traversals/
 # tree pre and post jennys lectures
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.left = None
+		self.right = None
+class Test:
+    def __init__(self):
+        self.ind = 0
+        
+    def solve(self, pre, post,low, high, n):
+        if self.ind >= n or low > high:
+            return None
+        new = Node(pre[self.ind])
+        self.ind+=1
+        if self.ind >= n or low == high:
+            return new
+        i = low
+        while i <= high and pre[self.ind] != post[i]:
+            i+=1
+        if i < high:
+            new.left = self.solve(pre, post, low, i,n)
+            new.right =self.solve(pre, post, i+1, high, n)
+        return new
+    
+def printIn(root):
+    if root != None:
+        printIn(root.left)
+        print(root.data, end= " ")
+        printIn(root.right)
+if __name__ == "__main__":
+    pre = [ 1, 2, 4, 8, 9, 5, 3, 6, 7 ]
+    post = [ 8, 9, 4, 5, 2, 6, 7, 3, 1 ]
+    obj = Test()
+    root = obj.solve(pre, post,0,len(pre)-1, len(pre))
+    printIn(root)
