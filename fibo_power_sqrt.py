@@ -1,6 +1,7 @@
 # log(n) time complexity b negative as well as positive but note important thing here.
 # for negative b also answer is true
 # https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/
+# print('%.6f' %(power(x, y)))  --> print using float point last decimall point print 6 didgit after it
 def solve(a,b):
     if (b) == 0:
         return 1
