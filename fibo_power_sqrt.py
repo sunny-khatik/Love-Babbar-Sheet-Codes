@@ -25,7 +25,7 @@ print((solve(x, y)))
 # https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
 def square_root(x):
     start, end = 0, x 
-    for i in range(1000):
+    for i in range(100):
         mid=(start+end)/2  
         res=mid**2       
         if res==x:       
