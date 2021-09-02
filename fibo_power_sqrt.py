@@ -72,7 +72,19 @@ class Solution:
                 start = mid+1
         return math.floor(ans)
 
-
+#a^b if it is a negative
+def sol_negpos(a,b):
+    if b == 0:
+        return 1
+    ans = sol_negpos(a,int(b/2))
+    if b%2 == 0:
+        return ans*ans
+    else:
+        if b > 0:
+            return ans*ans*a
+        else:
+            return (ans*ans)/a
+            
 # nth fibonachi number using O(logn) approch
 # golden ration number 
 # https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
